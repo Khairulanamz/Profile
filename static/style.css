@@ -1,0 +1,116 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #0a0f1e;
+  color: white;
+}
+
+header {
+  background-color: #111827;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+  color: #60a5fa;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h2 span {
+  color: #60a5fa;
+}
+
+.btn {
+  padding: 0.7rem 1.4rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1e40af;
+}
+
+/* Grayscale hover effect */
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.hover-color:hover {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+.transition {
+  transition: all 0.5s ease;
+}
+
+/* Portrait */
+.portrait {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+/* Experience section */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.job-card {
+  background-color: #1f2937;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.company-logo {
+  width: 70px;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #111827;
+  margin-top: 3rem;
+}
+.btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.07);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}

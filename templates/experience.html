@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="experience animate-fade-in-up">
+  <h2>Professional Experience</h2>
+
+  <div class="experience-grid">
+
+    <!-- Experience 1 -->
+    <div class="job-card">
+      <h3>Business Intelligence Developer – SICPA</h3>
+      <img src="{{ url_for('static', filename='images/sicpa_logo.png') }}" class="company-logo grayscale hover-color transition" alt="SICPA Logo">
+      <span>Mar 2023 – Present</span>
+      <ul>
+        <li>Develop & maintain 10+ Tableau dashboards across key projects.</li>
+        <li>Support BI architecture, SSRS/SSIS analytics, and data quality processes.</li>
+        <li>Led architecture redesign for audit and discrepancy tracking.</li>
+      </ul>
+    </div>
+
+    <!-- Experience 2 -->
+    <div class="job-card">
+      <h3>Senior Data Analyst – Hong Leong Bank</h3>
+      <img src="{{ url_for('static', filename='images/hlb_logo.png') }}" class="company-logo grayscale hover-color transition" alt="HLB Logo">
+      <span>Oct 2022 – Mar 2023</span>
+      <ul>
+        <li>Created automation scripts and centralized campaign dashboards.</li>
+        <li>Built data trust and ensured quality for incentive campaign projects.</li>
+      </ul>
+    </div>
+
+    <!-- Experience 3 -->
+    <div class="job-card">
+      <h3>Data Analyst – Vettons Sdn Bhd</h3>
+      <img src="{{ url_for('static', filename='images/vettons_logo.png') }}" class="company-logo grayscale hover-color transition" alt="Vettons Logo">
+      <span>Oct 2021 – Mar 2022</span>
+      <ul>
+        <li>Analyzed eCommerce campaign performance and customer behavior.</li>
+        <li>Developed dashboards and reporting pipelines in Power BI.</li>
+      </ul>
+    </div>
+	
+  </div>
+  <div style="text-align:center; margin-top: 30px;">
+    <a href="{{ url_for('static', filename='Khairulanam_Resume.pdf') }}" 
+       download 
+       class="btn">
+       📄 Download My Resume
+    </a>
+</div>
+</section>
+{% endblock %}

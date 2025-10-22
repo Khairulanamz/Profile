@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+      animation: fade-in-up 0.8s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Khairulanam Portfolio</h1>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('experience') }}">Experience</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>© 2025 Khairulanam Zaini | Built with Flask</p>
+  </footer>
+<!-- 🎵 Background Music -->
+<audio id="bg-music" autoplay loop>
+    <source src="{{ url_for('static', filename='bg_music.mp3') }}" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("bg-music");
+    audio.volume = 0.3; // 30% volume
+    audio.muted = true; // start muted (bypass browser restriction)
+
+    // Unmute after user interacts with the page
+    const enableAudio = () => {
+      audio.muted = false;
+      audio.play();
+      document.removeEventListener("click", enableAudio);
+      document.removeEventListener("scroll", enableAudio);
+    };
+
+    document.addEventListener("click", enableAudio);
+    document.addEventListener("scroll", enableAudio);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero animate-fade-in-up">
+  <div class="hero-content">
+    <img src="{{ url_for('static', filename='portrait.jpg') }}" 
+         alt="Khairulanam Portrait" 
+         class="portrait grayscale hover-color transition">
+    <h2>Hello, I'm <span>Khairulanam Bin Zaini</span></h2>
+    <p>Business Intelligence Developer | Data Analyst | Technology Enthusiast</p>
+    <a href="{{ url_for('experience') }}" class="btn">Explore My Portfolio</a>
+  </div>
+</section>
+{% endblock %}
