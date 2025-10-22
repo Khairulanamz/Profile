@@ -3,42 +3,73 @@
 <section class="experience animate-fade-in-up">
   <h2>Professional Experience</h2>
 
-  <div class="experience-grid">
-
-    <!-- Experience 1 -->
-    <div class="job-card">
-      <h3>Business Intelligence Developer – SICPA</h3>
-      <img src="{{ url_for('static', filename='images/sicpa_logo.png') }}" class="company-logo grayscale hover-color transition" alt="SICPA Logo">
-      <span>Mar 2023 – Present</span>
-      <ul>
-        <li>Develop & maintain 10+ Tableau dashboards across key projects.</li>
-        <li>Support BI architecture, SSRS/SSIS analytics, and data quality processes.</li>
-        <li>Led architecture redesign for audit and discrepancy tracking.</li>
-      </ul>
+  <!-- SICPA -->
+  <div class="experience-card">
+    <div class="card-content">
+      <div class="card-text">
+        <h3>SICPA Product Security Sdn Bhd</h3>
+        <h4>Business Intelligence Developer (Mar 2023 – Present)</h4>
+        <ul>
+          <li>Develop & maintain Tableau dashboards for 4 main company products and 10+ projects.</li>
+          <li>Maintain & customize BI Data Cube, SSRS, and SSIS Analytics Data.</li>
+          <li>Provide L3 level support for production incidents.</li>
+          <li>Commission Tableau Server in Non-Prod & Prod environments.</li>
+          <li>Prepare & document BI release notes and wiki pages.</li>
+        </ul>
+        <p><strong>Key Achievements:</strong></p>
+        <ul>
+          <li>Closed 40+ BI milestones (2023–2025) with 95% success to production.</li>
+          <li>Designed new audit module data architecture for PDF & approval monitoring.</li>
+          <li>Resolved recurring data discrepancies by redesigning product data structure.</li>
+        </ul>
+      </div>
+      <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/sicpa_logo.png') }}" alt="SICPA Logo">
+      </div>
     </div>
+  </div>
 
-    <!-- Experience 2 -->
-    <div class="job-card">
-      <h3>Senior Data Analyst – Hong Leong Bank</h3>
-      <img src="{{ url_for('static', filename='images/hlb_logo.png') }}" class="company-logo grayscale hover-color transition" alt="HLB Logo">
-      <span>Oct 2022 – Mar 2023</span>
-      <ul>
-        <li>Created automation scripts and centralized campaign dashboards.</li>
-        <li>Built data trust and ensured quality for incentive campaign projects.</li>
-      </ul>
+  <!-- Hong Leong Bank -->
+  <div class="experience-card">
+    <div class="card-content">
+      <div class="card-text">
+        <h3>Hong Leong Bank Berhad</h3>
+        <h4>Senior Data Analyst (Oct 2022 – Mar 2023)</h4>
+        <ul>
+          <li>Extracted data using Teradata SQL & Data Studio.</li>
+          <li>Led automation documentation & migration scripts.</li>
+          <li>Developed Tableau & Google Data Studio dashboards for campaign tracking.</li>
+          <li>Guided and reviewed work of junior analysts.</li>
+        </ul>
+      </div>
+      <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/hlb_logo.png') }}" alt="Hong Leong Bank Logo">
+      </div>
     </div>
+  </div>
 
-    <!-- Experience 3 -->
-    <div class="job-card">
-      <h3>Data Analyst – Vettons Sdn Bhd</h3>
-      <img src="{{ url_for('static', filename='images/vettons_logo.png') }}" class="company-logo grayscale hover-color transition" alt="Vettons Logo">
-      <span>Oct 2021 – Mar 2022</span>
-      <ul>
-        <li>Analyzed eCommerce campaign performance and customer behavior.</li>
-        <li>Developed dashboards and reporting pipelines in Power BI.</li>
-      </ul>
+  <!-- Vettons -->
+  <div class="experience-card">
+    <div class="card-content">
+      <div class="card-text">
+        <h3>Vettons Sdn Bhd</h3>
+        <h4>Data Analyst (2021 – 2022)</h4>
+        <ul>
+          <li>Analyzed customer purchase data to optimize promotional campaigns.</li>
+          <li>Collaborated with marketing team for targeted audience segmentation.</li>
+          <li>Automated daily sales reports using Python and SQL.</li>
+          <li>Monitored product performance metrics and sales trends.</li>
+        </ul>
+        <p><strong>Key Achievements:</strong></p>
+        <ul>
+          <li>Improved campaign ROI by 15% through precise targeting analytics.</li>
+          <li>Reduced reporting time from 3 hours to 10 minutes via automation.</li>
+        </ul>
+      </div>
+      <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/vettons_logo.png') }}" alt="Vettons Logo">
+      </div>
     </div>
-	
   </div>
   <div style="text-align:center; margin-top: 30px;">
     <a href="{{ url_for('static', filename='Khairulanam_Resume.pdf') }}" 

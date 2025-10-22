@@ -1,116 +1,277 @@
+/* --- Global layout --- */
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
   background-color: #0a0f1e;
-  color: white;
+  color: #fff;
+}
+main {
+  padding-top: 80px; /* Adjust based on navbar height */
 }
 
-header {
-  background-color: #111827;
-  padding: 1rem 3rem;
+/* --- NAVBAR STYLES --- */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 15, 30, 0.65);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
 }
 
-header ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-header ul li a {
+.nav-logo {
   color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-header ul li a:hover {
-  color: #60a5fa;
+.nav-logo:hover {
+  color: #38bdf8; /* cyan hover */
 }
 
-.hero {
+.nav-links {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 5rem 2rem;
+  gap: 1.5rem;
+  margin: 0;
 }
 
-.hero h2 span {
-  color: #60a5fa;
-}
-
-.btn {
-  padding: 0.7rem 1.4rem;
-  background-color: #2563eb;
-  color: white;
-  border-radius: 8px;
+.nav-links a {
+  color: #e5e7eb;
   text-decoration: none;
-  margin-top: 1rem;
-  transition: background-color 0.3s ease;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #1e40af;
+.nav-links a:hover {
+  color: #38bdf8;
 }
 
-/* Grayscale hover effect */
-.grayscale {
-  filter: grayscale(100%);
+/* --- Landing Page --- */
+.landing {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+/* --- EXPERIENCE SECTION --- */
+.experience {
+  padding: 100px 10%;
+  background: linear-gradient(145deg, #0f172a, #1e293b);
+  color: #f8fafc;
+  min-height: 100vh;
 }
 
-.hover-color:hover {
-  filter: grayscale(0%);
+.experience h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-card h3 {
+  color: #38bdf8;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.experience-card h4 {
+  color: #e5e7eb;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.experience-card ul {
+  margin: 0 0 1rem 1.5rem;
+  padding: 0;
+}
+
+.experience-card li {
+  line-height: 1.7;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.experience-card strong {
+  color: #f8fafc;
+}
+/* --- EXPERIENCE CARD LAYOUT WITH LOGO (CENTER-RIGHT + GLOW) --- */
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* centers vertically */
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card-text {
+  flex: 1 1 70%;
+}
+
+.logo-container {
+  flex: 1 1 25%;
+  display: flex;
+  justify-content: flex-end; /* aligns logo to the right */
+  align-items: center;
+}
+
+.logo-container img {
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 10px 15px;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  border-color: rgba(0, 255, 255, 0.4);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .card-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .logo-container {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+/* Left: color portrait */
+.landing-left {
+  flex: 1;
+  min-width: 50%;
+  overflow: hidden;
+}
+
+.portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Remove grayscale */
+  filter: none;
+  transition: transform 0.6s ease-in-out;
+}
+
+.portrait-img:hover {
   transform: scale(1.03);
 }
 
-.transition {
-  transition: all 0.5s ease;
+/* Right: content */
+.landing-right {
+  flex: 1;
+  background: linear-gradient(160deg, #111827 60%, #1f2937 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
 }
 
-/* Portrait */
-.portrait {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
+.landing-content {
+  max-width: 550px;
+  text-align: left;
+}
+
+/* Bold title */
+.main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+/* Glass effect logo box */
+.logo-box {
+  width: 160px;
+  height: 160px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Experience section */
-.experience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
+.logo-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
 }
 
-.job-card {
-  background-color: #1f2937;
-  border-radius: 16px;
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.logo-box img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
 }
 
-.job-card:hover {
+/* Text & buttons */
+.intro-text {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.glass-btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #111827;
+}
+.experience-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.company-logo {
-  width: 70px;
-  display: block;
-  margin: 0.5rem auto;
-}
-
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: #111827;
-  margin-top: 3rem;
-}
-.btn:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.07);
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  border-color: #38bdf8;
+  box-shadow: 0 6px 25px rgba(56, 189, 248, 0.3);
 }

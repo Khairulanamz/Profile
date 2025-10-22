@@ -1,13 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="hero animate-fade-in-up">
-  <div class="hero-content">
+<section class="landing">
+  <!-- Left: Color portrait -->
+  <div class="landing-left">
     <img src="{{ url_for('static', filename='portrait.jpg') }}" 
-         alt="Khairulanam Portrait" 
-         class="portrait grayscale hover-color transition">
-    <h2>Hello, I'm <span>Khairulanam Bin Zaini</span></h2>
-    <p>Business Intelligence Developer | Data Analyst | Technology Enthusiast</p>
-    <a href="{{ url_for('experience') }}" class="btn">Explore My Portfolio</a>
+         alt="Khairulanam Portrait" class="portrait-img">
+  </div>
+
+  <!-- Right: Content -->
+  <div class="landing-right">
+    <div class="landing-content">
+      <h1 class="main-title">KHAIRULANAM<br>PORTFOLIO</h1>
+
+      <!-- Company logo inside glass box -->
+      <div class="logo-box">
+        <img src="{{ url_for('static', filename='images/sicpa_logo.png') }}" 
+             alt="SICPA Logo">
+      </div>
+
+      <p class="intro-text">
+        Business Intelligence Developer | Data Analyst | BI Enthusiast<br>
+        Skilled in Tableau, Power BI, SQL, and Data Architecture Optimization.
+      </p>
+
+      <div class="btn-group">
+        <a href="{{ url_for('about') }}" class="glass-btn">About Me</a>
+        <a href="{{ url_for('experience') }}" class="glass-btn">Experience</a>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}
