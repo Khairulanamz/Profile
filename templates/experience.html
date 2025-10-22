@@ -71,12 +71,14 @@
       </div>
     </div>
   </div>
-  <div style="text-align:center; margin-top: 30px;">
-    <a href="{{ url_for('static', filename='Khairulanam_Resume.pdf') }}" 
-       download 
-       class="btn">
-       📄 Download My Resume
-    </a>
-</div>
+  <div class="experience-card">
+    <div class="card-content">
+      <div class="card-text">
+          <h3>Download My Resume</h3>
+          <a href="{{ url_for('static', filename='Khairulanam_Resume.pdf') }}" class="btn-glow" download>📄 Download Resume</a>
+              </div>
+    </div>
+  </div>
+
 </section>
 {% endblock %}

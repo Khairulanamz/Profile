@@ -1,18 +1,99 @@
-{% extends "base.html" %}
-{% block content %}
-<section class="about animate-fade-in-up">
-  <h2>About Me</h2>
-  <p>
-    Passionate <strong>Business Intelligence Developer</strong> with a strong interest in technology and data analytics. 
-    Experienced in <strong>Tableau, Power BI, SQL, and BI architecture</strong>. 
-    Skilled in designing scalable dashboards and automating data processes across banking, retail, and telecom industries.
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Khairulanam Portfolio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
-  <div class="personal-info">
-    <p><b>Address:</b> Cyberjaya, Selangor</p>
-    <p><b>Mobile:</b> 014–5844107</p>
-    <p><b>Email:</b> <a href="mailto:khairulanam155@gmail.com">khairulanam155@gmail.com</a></p>
-    <p><b>LinkedIn:</b> <a href="https://linkedin.com/in/khairulanamz" target="_blank">linkedin.com/in/khairulanamz</a></p>
+<!-- Navbar -->
+<header class="navbar glass-nav">
+  <div class="nav-container">
+    <div class="logo">Khairulanam Portfolio</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}" class="active">About</a></li>
+        <li><a href="{{ url_for('experience') }}">Experience</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
   </div>
-</section>
-{% endblock %}
+</header>
+
+
+  <!-- About Section -->
+  <section class="section">
+    <div class="glass-container about-container">
+      <h1>About Me</h1>
+      <div class="about-content">
+        <div class="profile-section">
+          <img src="{{ url_for('static', filename='portrait.jpg') }}" alt="Khairulanam" class="about-photo">
+          <div class="about-info">
+            <h2>Khairulanam Bin Zaini</h2>
+            <p><strong>Address:</strong> Cyberjaya, Selangor</p>
+            <p><strong>Mobile:</strong> 014 – 5844107</p>
+            <p><strong>Email:</strong> <a href="mailto:khairulanam155@gmail.com">khairulanam155@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/khairulanamz" target="_blank">linkedin.com/in/khairulanamz</a></p>
+          </div>
+        </div>
+
+        <div class="about-text glass-card">
+          <h2>Summary</h2>
+          <p>
+            Passionate and aspiring <strong>Business Intelligence Developer</strong> with a keen interest in technology and data analytics.
+            Skilled in Python, SQL, and BI tools such as Power BI, Tableau, and QuickSight.
+            Experienced in building data architecture, dashboard optimization, and ensuring data quality.
+          </p>
+        </div>
+
+        <div class="about-text glass-card">
+          <h2>Education</h2>
+          <ul>
+            <li><strong>Bachelor of Engineering (Hons) Electronic Engineering</strong> – UiTM Shah Alam (CGPA: 3.36)</li>
+            <li><strong>Diploma in Electrical Engineering</strong> – UiTM Samarahan (CGPA: 3.10)</li>
+          </ul>
+        </div>
+
+        <div class="about-text glass-card">
+          <h2>Career Objective</h2>
+          <p>
+            To utilize my analytical and technical skills to develop impactful business intelligence solutions.
+            I aim to continuously improve data processes and contribute to strategic decision-making across organizations.
+          </p>
+        </div>
+
+        <div class="about-text glass-card">
+          <h2>Strengths</h2>
+          <ul>
+            <li>Strong leadership and management skills</li>
+            <li>Versatile BI Developer with experience in Tableau, Power BI, and SSRS</li>
+            <li>Wide business insight in e-commerce, banking, and tech sectors</li>
+            <li>Fast adaptability and excellent problem-solving mindset</li>
+          </ul>
+        </div>
+
+        <div class="about-text glass-card">
+          <h2>Personal Interests</h2>
+          <p>
+            I’m passionate about continuous learning, dashboard design, and visual storytelling through data.
+            Outside of analytics, I’m an active bowler and represented my university in several tournaments.
+          </p>
+        </div>
+
+        <div class="about-text glass-card center">
+          <h2>Download My Resume</h2>
+          <a href="{{ url_for('static', filename='files/Khairulanam_Resume.pdf') }}" class="btn-glow" download>📄 Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Khairulanam Bin Zaini | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
