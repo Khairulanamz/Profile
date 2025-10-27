@@ -19,7 +19,10 @@
   <header>
 <nav class="navbar">
   <div class="nav-container">
-    <a href="{{ url_for('home') }}" class="nav-logo">KHAIRULANAM PORTFOLIO</a>
+	<div class="navbar-left">
+    <img src="{{ url_for('static', filename='images/knz_logo.png') }}" alt="Logo" class="logo">
+    <span class="brand-name">KHAIRULANAM PORTFOLIO</span>
+  </div>
     <ul class="nav-links">
       <li><a href="{{ url_for('home') }}">Home</a></li>
       <li><a href="{{ url_for('about') }}">About</a></li>

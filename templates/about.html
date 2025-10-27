@@ -3,16 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Khairulanam Portfolio</title>
+  <title>{{ title }}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    @keyframes fade-in-up {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+      animation: fade-in-up 0.8s ease-out;
+    }
+  </style>
 </head>
 <body>
 
 <!-- Navbar -->
 <header class="navbar glass-nav">
   <div class="nav-container">
-    <div class="logo">Khairulanam Portfolio</div>
-    <nav>
+	<div class="navbar-left">
+    <img src="{{ url_for('static', filename='images/knz_logo.png') }}" alt="Logo" class="logo">
+    <span class="brand-name">KHAIRULANAM PORTFOLIO</span>
+  </div>
       <ul class="nav-links">
         <li><a href="{{ url_for('home') }}">Home</a></li>
         <li><a href="{{ url_for('about') }}" class="active">About</a></li>
@@ -21,6 +32,7 @@
       </ul>
     </nav>
   </div>
+  
 </header>
 
 
