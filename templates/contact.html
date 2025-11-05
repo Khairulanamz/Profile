@@ -1,13 +1,74 @@
-{% extends "base.html" %}
-{% block content %}
-<section class="contact animate-fade-in-up">
-  <h2>Contact Me</h2>
-  <p>I'd love to connect! Feel free to reach out via email or LinkedIn.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Khairulanam Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
-  <ul>
-    <li><b>Email:</b> <a href="mailto:khairulanam155@gmail.com">khairulanam155@gmail.com</a></li>
-    <li><b>Phone:</b> 014–5844107</li>
-    <li><b>LinkedIn:</b> <a href="https://linkedin.com/in/khairulanamz" target="_blank">linkedin.com/in/khairulanamz</a></li>
-  </ul>
-</section>
-{% endblock %}
+    <!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-container">
+	<div class="navbar-left">
+    <img src="{{ url_for('static', filename='images/knz_logo.png') }}" alt="Logo" class="logo">
+    <span class="brand-name">KHAIRULANAM PORTFOLIO</span>
+  </div>
+    <ul class="nav-links">
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('experience') }}">Experience</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container glass-card">
+            <h2>Let’s Get in Touch</h2>
+            <p>If you’d like to collaborate, discuss opportunities, or just say hello, feel free to reach out below.</p>
+
+            <form id="contactForm" onsubmit="return sendEmail()">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Collaboration or Inquiry" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-glow">Send Email</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function sendEmail() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+
+            const mailtoLink = `mailto:khairulanamzaini@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+            
+            window.location.href = mailtoLink;
+            return false; // Prevent default form submission
+        }
+    </script>
+
+</body>
+</html>
