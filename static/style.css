@@ -515,3 +515,104 @@ input:focus, textarea:focus {
     background: rgba(0, 255, 255, 0.4);
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
 }
+
+/* Projects Section */
+.projects {
+    padding: 80px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #00ffff;
+    text-shadow: 0 0 12px #00ffff;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.card-date {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.tech-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.tech-list li {
+    background: rgba(0, 255, 255, 0.1);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    color: #00ffff;
+}
+
+/* Glowing border effect */
+.glow-border {
+    border: 2px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* Project logos */
+.logo-container {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.logo-container img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+}
